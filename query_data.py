@@ -30,7 +30,7 @@ def query_rag(query_text: str):
     context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
     prompt = prompt_template.format(context=context_text, question=query_text)
-    genai.configure(api_key = "AIzaSyBkS6BemzUZeJmUqoyPcW0YPaIoJtbJHOs")
+    genai.configure(api_key = "AIzaSyBkS6BemzUZeJmUqoyPcW0YPaIoJtbxxxx")
     model = genai.GenerativeModel("gemini-2.5-pro")
     response = model.generate_content(prompt)
     print(response.text)
@@ -40,4 +40,5 @@ def query_rag(query_text: str):
     return formatted_response
     
 if __name__ == "__main__":
+
     main()
