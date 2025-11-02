@@ -29,7 +29,7 @@ def query_and_validate(question: str, expected_response: str):
         expected_response=expected_response, actual_response=response_text
     )
 
-    genai.configure(api_key="AIzaSyBkS6BemzUZeJmUqoyPcW0YPaIoJtbJHOs")
+    genai.configure(api_key="AIzaSyBkS6BemzUZeJmUqoyPcW0YPaIoJtbxxxx")
     model = genai.GenerativeModel("gemini-1.5-pro")
     response = model.generate_content(prompt)
     # Extract and clean the response text
@@ -47,4 +47,5 @@ def query_and_validate(question: str, expected_response: str):
     else:
         raise ValueError(
             f"Invalid evaluation result. Cannot determine if 'true' or 'false'."
+
         )
